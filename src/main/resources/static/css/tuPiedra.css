@@ -1,0 +1,108 @@
+:root {
+    --fuenteNav: 'Suez One', serif;
+    --fuenteText:'Roboto Slab', serif;
+    --color1: #CFB9AD;
+    --color2: #E7DFE0;
+    --color3: #F1F3FA;
+    --color4: #A48676;
+    --color5: #30200E;
+    --color6: #76879F;
+  
+  }
+  body{
+    background-color: var(--color2);
+  }
+main {
+    display: flex;
+    margin: 0em 0em;
+    padding-top: 2em;
+    background-color: #E7DFE0;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mes-nacimiento {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    padding: 1em;
+    grid-template-rows: auto auto;
+    justify-content: space-around;
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+}
+
+.mes {
+    margin: .5em .5em;
+    padding: 1em 3em;
+    background-color: #76879F;
+    border-radius: 1.5em;
+    border: none;
+}
+
+.mes:hover,.pagar:hover{
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+    background-color: #A48676;
+    border: 1px solid black;
+}
+
+.resultado {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    margin: 3em;
+    justify-content: center;
+}
+
+.tu-piedra img{
+    width: 100%;
+    height: auto;
+}
+
+
+/* estilos de pagina "Confirma tu pedido*/
+.pedido{
+    background-color: #CFB9AD;
+    margin: 5px 200px 10px 200px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    margin: 5em;
+    gap: 5em;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 50px;
+}
+
+.imagen-pedido{
+    width: 30%;
+    height: auto;
+}
+
+td,th {
+    text-align: center;
+    font-size: 15px;
+    padding: 2em;
+}
+
+.cupon-in{
+    width: 200px;
+    height: auto;
+    margin: 1em;
+    padding: .5em;
+    border-radius: 5px;
+}
+
+.pagar{
+    width: 200px;
+    height: auto;
+    margin: 1em;
+    padding: .5em;
+    border-radius: 5px;
+    border: none;
+}
+
+

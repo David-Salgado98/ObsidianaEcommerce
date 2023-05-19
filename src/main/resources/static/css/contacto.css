@@ -1,0 +1,215 @@
+:root {
+    --fuenteNav: 'Suez One', serif;
+    --fuenteText:'Roboto Slab', serif;
+    --color1: #CFB9AD;
+    --color2: #E7DFE0;
+    --color3: #F1F3FA;
+    --color4: #A48676;
+    --color5: #30200E;
+    --color6: #76879F;
+  
+  }
+body{
+    background-color: var(--color2);
+    font-family: var(--fuenteText)
+
+}
+
+.contacto-form{
+   background-color: white;
+    color:black;
+    font-size: 18px;
+    padding: 25px;
+    margin: 10% 10% 10% 10%;
+}
+
+.contacto-form p,
+.contacto-form h2,
+.contacto-form ul {
+    margin: 0;
+    padding: 0;
+}
+
+.form-titulo{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    
+    
+}
+
+fieldset{
+    background-color: #CFB9AD;
+    border: none;
+    border-radius: 15px;
+}
+
+.datos-contacto{
+
+display: grid;
+gap: 20px;
+}
+
+.datos-contacto input{
+    border-radius: 10px;
+    border: none;
+    height: 30px;
+    padding: 5px 10px;
+    background-color: #F1F3FA;
+    outline: none;
+}
+
+textarea{
+    border-radius: 7px;
+    border: none;
+    padding: 5px 10px;
+    height: auto;
+    resize: vertical;
+    width: 100%;
+    background-color: #F1F3FA;
+    outline: none;
+}
+
+.enviar-boton{
+    margin: 10px;
+}
+
+button{
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+
+    background-color: #A48676;
+    border-radius: 7px;
+    color:black;
+    border: none;
+    cursor: pointer;
+}
+
+.container-redes, .contacto-img{
+    margin: 10% 10% 10% 10%;
+    text-align: center;
+}
+
+.logos{
+    margin: 10;
+    display: flex;
+    gap: 10%;
+    
+}
+
+@media (min-width: 950px){
+    body{
+        background-color: #E7DFE0;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    .contacto-form{
+       background-color: white;
+        color:black;
+        font-size: 20px;
+        padding: 70px;
+        margin: 10% 10% 10% 10%;
+        max-width: 600px;
+        
+    }
+    
+    .contacto-form p,
+    .contacto-form h2,
+    .contacto-form ul {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .form-titulo{
+        font-size: 30px;
+        font-weight: 500;
+        text-align: center;
+        
+    }
+    
+    fieldset{
+        background-color: #CFB9AD;
+        border: none;
+        border-radius: 15px;
+        max-width: 950px;
+    }
+    
+    .datos-contacto{
+        display: grid;
+        gap: 20px;
+    }
+    
+    .datos-contacto input{
+        border-radius: 10px;
+        border: none;
+        height: 30px;
+        padding: 5px 10px;
+        background-color: #F1F3FA;
+        outline: none;
+    }
+    
+    textarea{
+        border-radius: 7px;
+        border: none;
+        padding: 5px 10px;
+        height: auto;
+        resize: vertical;
+        width: 100%;
+        background-color: #F1F3FA;
+        outline: none;
+    }
+    
+    .enviar-boton{
+        margin: 10px;
+    }
+    
+    button{
+        width: 100%;
+        height: 50%;
+        padding: 10px;
+    
+        background-color: #A48676;
+        border-radius: 7px;
+        color:black;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .container-redes, .contacto-img{
+        margin: 10% 10% 10% 10%;
+        text-align: center;
+    }
+    
+    .logos{
+        margin: 10;
+        display: flex;
+        gap: 10%;
+        padding-left: 30px;
+    }
+place-holder{
+    color: #A48676;
+}
+.contacto-form{
+    grid-area: form;
+}
+
+.contacto-img{
+    grid-area: imagen;
+}
+
+.container-redes{
+    grid-area: redes;
+    
+}
+
+.contacto-general{
+    display: grid;
+    grid:
+    "form  imagen"
+    "redes  redes"
+    
+}
+
+
+}
