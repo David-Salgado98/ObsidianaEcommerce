@@ -13,7 +13,7 @@ public class ClientesServiceImpl implements ClientesService{
     @Autowired
     ClientesRepository clientesRepository;
 
-    private PasswordEncoder passwordEncoder;
+
 
     @Override
     public List<Clientes> findAllClientes() {
@@ -21,20 +21,20 @@ public class ClientesServiceImpl implements ClientesService{
     }
 
     @Override
-    public Clientes findByEmail(String email) {
-        return clientesRepository.findByEmail(email).orElse(null);
+    public List<Clientes> findByEmail(String email) {
+        return clientesRepository.findByEmail(email);
     }
 
     @Override
-    public void guardarCliente(Clientes clientes) {
+    public Clientes guardarCliente(Clientes clientes) {
         if ( existClientesByEmail(clientes.getEmail() ) )
             throw new IllegalStateException("The user already exists with email: " + clientes.getEmail());
         else if ( clientes.getEmail().length() > Clientes.FIELD_MAX_LENGTH )
             throw new IllegalStateException("Email length is greater than: " + Clientes.FIELD_MAX_LENGTH);
 
         //clientes.setId(0);
-        clientes.setPassword( passwordEncoder.encode(clientes.getPassword()));
-         clientesRepository.save(clientes);
+
+        return clientesRepository.save(clientes);
     }
 
     @Override
@@ -50,7 +50,12 @@ public class ClientesServiceImpl implements ClientesService{
             throw new IllegalStateException("Email length is greater than: " + Clientes.FIELD_MAX_LENGTH);
 
         //clientes.setId(0);
-        clientes.setPassword( passwordEncoder.encode(clientes.getPassword()));
+        clientes.setPassword( clientes.getPassword());
         return clientesRepository.save(clientes);
+    }
+
+    @Override
+    public Clientes getClienteById(Long clienteId) {
+        return clientesRepository.getById(clienteId);
     }
 }

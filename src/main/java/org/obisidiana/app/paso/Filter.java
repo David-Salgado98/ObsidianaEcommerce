@@ -3,7 +3,6 @@ package org.obisidiana.app.paso;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
 @Repository
 public class Filter {
     private List<String> materialesId;

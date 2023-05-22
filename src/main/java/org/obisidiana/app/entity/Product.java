@@ -21,6 +21,8 @@ public class Product {
     private String dire;
     private Double cost;
     private String description;
+    @Column(name = "mercado_url")
+    private String mercadoUrl;
 
 
     @ManyToOne(fetch = FetchType.LAZY)

@@ -22,7 +22,7 @@ spring:
     driverClassName: org.h2.Driver
     platform: h2
     username: sa
-    password:
+    password: sa
 
   # ===============================
   # JPA / HIBERNATE

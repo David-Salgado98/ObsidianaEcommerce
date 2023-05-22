@@ -7,13 +7,15 @@ import java.util.List;
 public interface ClientesService {
     public List<Clientes> findAllClientes();
 
-    public  Clientes findByEmail(String email);
+    public  List<Clientes> findByEmail(String email);
 
-    public void guardarCliente(Clientes clientes);
+    public Clientes guardarCliente(Clientes clientes);
 
     public boolean existClientesByEmail(String email);
 
     public Clientes setCustomer(Clientes clientes);
+
+    public Clientes getClienteById(Long clienteId);
 
 
 }
